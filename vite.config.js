@@ -18,7 +18,7 @@ export default defineConfig(({ command, mode }) => {
       open: true,
       proxy: {
         '/api': {
-          target: 'https://xnovaapi20251024123055.azurewebsites.net',
+          target: process.env.VITE_API_URL,
           changeOrigin: true,
           secure: false,
         },
