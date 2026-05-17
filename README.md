@@ -10,16 +10,15 @@ A frontend web platform for sports court booking and management. It provides rol
 
 ## My Contributions (TniTni)
 
-- **Owner schedule management dashboard** — calendar UI for owners to create, view, and update booking slots with live availability.
+- **Owner schedule management dashboard** — calendar UI for owners to create, view, and update booking slots with availability display.
 - **Admin management portal** — platform-wide management of users, venues, and role/permission settings.
-- **RESTful API integration** — integrated with backend endpoints to keep booking state synchronized across views.
+- **RESTful API integration** — integrated with backend endpoints to fetch and update booking data across views.
 
 ## Features
 
 - Role-based access control (Admin, Owner, User)
 - Interactive calendar-based schedule management
 - Secure online payment integration
-- Booking synchronization via REST API (polled) — can be upgraded to real-time (WebSocket/socket.io) if the backend provides a realtime endpoint
 - Responsive UI for mobile and desktop
 
 ## Technologies
@@ -27,9 +26,9 @@ A frontend web platform for sports court booking and management. It provides rol
 | Category | Stack |
 |---|---|
 | Frontend | React, Vite |
-| Styling | Plain CSS (component styles under `src/app/components` and `src/app/ui`) |
+| Styling | CSS Modules |
 | State Management | React Context API |
-| HTTP Client | RESTful API (fetch/axios on services) |
+| HTTP Client | RESTful API |
 | Build Tool | Vite |
 | Version Control | Git |
 
@@ -37,12 +36,10 @@ A frontend web platform for sports court booking and management. It provides rol
 
 ### Prerequisites
 
-- Node.js (v16+ recommended) — check your Node version with `node -v`
-- npm (bundled with Node) or yarn
+- Node.js (v16+ recommended)
+- npm or yarn
 
-### Install
-
-Install dependencies:
+### Installation
 
 ```bash
 npm install
@@ -50,45 +47,35 @@ npm install
 
 ### Development
 
-Run the dev server (Vite):
+Run the dev server:
 
 ```bash
 npm run dev
 ```
 
-Open http://localhost:5173 (or the address shown by Vite).
+The app will be available at `http://localhost:5173`
 
-### Build / Preview
-
-Build for production:
+### Build for Production
 
 ```bash
 npm run build
 ```
 
-Preview the production build locally:
+### Preview Production Build
 
 ```bash
 npm run preview
 ```
 
-### Linters
-
-Run ESLint:
+### Linting
 
 ```bash
 npm run lint
 ```
 
-### Environment Variables
+## Environment Variables
 
-Create a `.env` file in the project root (this repo uses Vite):
-
-```
-VITE_API_URL=https://your-backend-api-url.com
-```
-
-You can store local overrides in `.env.local` or use a `.env.example` for reference.
+Create a `.env` file in the project root:
 
 ## Project Structure (partial)
 
